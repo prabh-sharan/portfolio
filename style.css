@@ -1,9 +1,251 @@
 
+*{
+    box-sizing: border-box;
+}
 body{
-    
+    margin: 0 ;
+    font-size: 1rem;
+    font-family: 'Heebo', sans-serif;
+    letter-spacing: 2px;
+    /* background-color: #e9f5db; */
     
 }
-nav{
-    background-color: #d90429;
-    color: #fff;
+
+.container{
+    margin-left: 1em;
 }
+span{
+    color: #55a630;
+}
+/* 
+===========
+    Main
+=========== */
+
+main,
+.section-about,
+.section-skills{
+    
+    /* border:2px solid red; */
+}
+main{
+    margin-top: 0;
+    margin-bottom: 2em;
+    padding:5em 0 5em 2em ;
+    height: 100vh;
+    
+}    
+h1{
+    font-size:4.5rem;
+    color: #1f2421;
+    
+}
+
+
+.social-media{
+    max-width: 520px;
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+    align-items: center;
+   
+}
+.social-icon{
+    max-width:2.6em;
+    transition:transform 120ms;
+}
+
+
+.social-icon:hover{
+    transform: scale(1.1);
+    
+}
+
+.style-line{
+    width:280px;
+    border-bottom:4px solid #55a630;
+}
+
+/* 
+=================
+  About section
+================= */
+.section-about{
+    /* border:2px solid #55a630; */
+    height:30% ;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3.5em;
+}
+.section-about p{
+    /* border:2px solid red; */
+    /* margin-left:1em; */
+    padding: 1em 1.8em ;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    text-align: justify;
+    color: #6c757d;
+    margin-top: 0;
+}
+
+
+/* 
+=================
+  Skills section
+================= */
+
+.section-skills{
+    border-top: 5px solid #55a630;
+    max-width:60%;
+    margin: 5em auto 8em;
+    text-align: center;
+}
+
+.skills-header{
+    color: #1f2421;
+    font-size: 2.5rem;
+    font-style:'Heebo', sans-serif ;
+    margin-bottom: 1em;
+    /* border:2px solid red; */
+    
+}
+
+.skills-icon{
+    width:190px;
+    height: 180px;
+    padding:2.5em ;
+    margin:0 auto;
+    filter: grayscale(100%);
+    
+    /* border: 2px solid red; */
+}
+
+.icon-card {
+    background-color: #f8f9fa;
+    /* border-radius: 11px; */
+    box-shadow: 0 3px 10px #6c757d;
+    padding: 1em;
+    margin: 0.8em;
+    /* border:2px solid #55a630; */
+}
+
+.icon-card:hover{
+    filter:none;
+    /* box-shadow: none; */
+}
+
+/* 
+===================
+  Projects section
+=================== */
+
+
+
+
+
+/*
+==============
+ Footer
+============== */
+footer{
+    /* min-height: 150px; */
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding: 2.2em 0;
+    border-top:5px solid #55a630;
+    background-color: #1f2421;
+}
+footer ul{
+    max-width: 35%;
+    padding-left: 0;
+    display:flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    /* border:2px solid green; */
+    
+}
+
+footer ul li{
+    list-style:none;
+    padding: 0.1em;
+}
+
+.footer-socials-link{
+    color: #adb5bd;
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 2.2px;
+}
+
+.footer-socials-link:after{
+    background-color: #fff;
+    content: "";
+    position: absolute;
+    left:0;
+    bottom: -2.5px;
+    height: 1.5px;
+    transition: 0.3s;
+    width:0;
+
+}
+
+.footer-socials-link:hover::after{
+    width: 100%;
+}
+
+.footer-socials-link:hover{
+    color:#fff;
+}
+
+
+
+
+
+
+
+
+
+/*
+==============
+ Media queries
+============== */
+
+/* for min width of 600 px or bigger */
+@media screen and (min-width:900px){
+    .navbar ul {
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+/* footer{
+    max-width: 100%;
+    padding: 2em;
+    background-color: #55a630;
+    
+}
+
+footer ul{
+    border:2px solid green;
+    padding-left: 0;
+    display: flex;
+    align-self: flex-start;
+}
+
+footer ul li{
+    list-style:none;
+
+} */
