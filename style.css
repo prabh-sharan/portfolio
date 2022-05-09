@@ -12,11 +12,9 @@ body{
 }
 
 .container{
-    margin-left: 1em;
+    /* margin-left: 1em; */
 }
-span{
-    color: #55a630;
-}
+
 /* 
 ===========
     Main
@@ -26,28 +24,58 @@ main,
 .section-about,
 .section-skills{
     
-    border:2px solid red;
+    /* border:2px solid red; */
 }
 main{
     margin-top: 0;
-    margin-bottom: 2em;
+    margin-bottom: 5em;
     padding:5em 0 5em 2em ;
     height: 100vh;
+    background-color:#e9f5db;
     
 }    
-h1{
-    font-size:4.5rem;
-    color: #1f2421;
-    
+
+
+/* Nav bar */
+
+.navbar{
+    border: 2px solid red;
 }
 
+.navbar ul{
+    border: 2px solid green;
+    padding-left: none;
+}
+
+.navbar li
+
+/* main heading */
+.name {
+    font-size:4.5rem;
+    color: #1f2421;
+    margin-bottom: 10px;
+    animation: text 800ms 1000ms ease ;
+}
+@keyframes text{
+    0% {
+        color:#e9f5db;
+        margin-top: 1.5em;
+        
+    }
+  
+}
+
+.name .green{
+    color: #55a630;
+}
 
 .social-media{
-    max-width: 520px;
+    max-width: 80%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     /* border: 2px solid red; */
     align-items: center;
+    margin-top: 1.25em;
    
 }
 .social-icon{
@@ -64,7 +92,10 @@ h1{
 .style-line{
     width:280px;
     border-bottom:4px solid #55a630;
+
+    
 }
+
 
 /* 
 =================
@@ -87,6 +118,7 @@ h1{
     
     margin-top: 0;
 }
+
 
 
 /* 
@@ -137,12 +169,20 @@ h1{
 
 /* 
 ===================
+
   Projects section
+
 =================== */
 
+.section-project,
+.project-set,
+.project-card{
+    
+    /* border: 2px solid red; */
+}
+
 .section-project{
-    border: 2px solid red;
-    margin-bottom: 4em;
+    margin-bottom: 11em;
 }
 
 .project-heading{
@@ -155,12 +195,12 @@ h1{
 
 .project-set{
     display: flex;
-    border: 2px solid purple;
-    margin-bottom:3em;
+    justify-content: space-around;
+    margin-bottom:5em;
 }
 
 .project-card{
-
+    /* border: 2px solid green; */
 }
 
 .project-image{
@@ -176,6 +216,38 @@ h1{
     letter-spacing: 2.75px;
 
 }
+.project-info{
+    max-width: 550px;
+    /* border: 2px solid gold; */
+    text-align: justify;
+}
+
+.project-code{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid yellowgreen; */
+    /* margin: 0 1em; */
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.project-code-live,
+.project-code-github{
+
+    text-decoration: none;
+    color:#1f2421;
+    
+}
+
+.project-code-live:hover,
+.project-code-live:focus{
+    text-decoration: underline;
+}
+
+.project-code-github:hover,
+.project-code-github:focus{
+    text-decoration: underline;
+}
 
 
 
@@ -183,22 +255,26 @@ h1{
 ==============
  Footer
 ============== */
+
 footer{
     /* min-height: 150px; */
-    font-size: 1.1rem;
+    font-size: 1.175rem;
     font-weight: 500;
     margin-bottom: 0;
-    padding: 2.2em 0;
-    /* border-top:5px solid #55a630; */
+    padding: 3em 0;
     background-color: #e9f5db;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    
+    
 }
 footer ul{
-    max-width: 35%;
+    width: 500px;
     padding-left: 0;
     display:flex;
     justify-content: space-around;
-    margin: 0 auto;
-    /* border:2px solid green; */
+    margin: 0 1.5em;
     
 }
 
@@ -215,12 +291,12 @@ footer ul li{
 }
 
 .footer-socials-link:after{
-    background-color: #55a630;
+    background-color: #1f2421;
     content: "";
     position: absolute;
     left:0;
     bottom: -2.5px;
-    height: 1.5px;
+    height: 1.9px;
     transition: 0.3s;
     width:0;
 
@@ -231,13 +307,22 @@ footer ul li{
 }
 
 .footer-socials-link:hover{
-    color:#55a630;
+    color:#1f2421;
 }
 
+/*  Scroll Up Btn */
 
+.scroll-top{
+    cursor:pointer;
+    object-fit: contain;
+    margin-right:1.5em;
+    transform:transition 180ms ;
+}
 
-
-
+.scroll-top:hover{
+    transform: scale(1.05);
+    
+}
 
 
 
@@ -247,8 +332,8 @@ footer ul li{
  Media queries
 ============== */
 
-/* for min width of 600 px or bigger */
-@media screen and (min-width:900px){
+/* for  width of 500 px or smaller */
+@media screen and (max-width:500px){
     .navbar ul {
         /* display: flex; */
         /* flex-direction: column; */
