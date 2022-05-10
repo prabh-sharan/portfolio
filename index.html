@@ -143,14 +143,39 @@
          </section>
 
          <!-- Section contact -->
-         <section>
-             <form>
-                <label for="name" >
-                    <input >
-                </label>
-                
-                <button ></button>
-             </form>
+         <section class="section-contact">
+             <h2>Contact Me!</h2>
+             <div class="form-container">
+                <form action="https://formspree.io/f/mayvaqgy" method="POST">
+                    <div class="contact-form" >
+                        <label for="name" >Name</label>
+                        <input id="name" type="text"  name="name"
+                        class="input-field"required>
+                    </div>
+
+                    <div class="contact-form" >
+                        <label for="email" >Email</label>
+                        <input id="email" type="email"  name="email"
+                        class="input-field" required>
+                    </div>
+
+                    <div class="contact-form" >
+                        <label for="message" >Message</label>
+                        <textarea
+                        id="message"
+                        cols="20"   
+                        rows="6"
+                        type="text"
+                        name="message"
+                        class="input-field"
+                        required  >
+                        </textarea>
+
+                    </div>
+
+                    <button type="submit" class="form-btn">Submit</button>
+                </form>
+            </div>
          </section>
         
     </div>

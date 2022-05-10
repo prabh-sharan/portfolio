@@ -239,7 +239,7 @@ main{
 }
 
 .section-project{
-    margin-bottom: 11em;
+    margin-bottom: 9em;
 }
 
 .project-heading{
@@ -305,8 +305,67 @@ main{
     text-decoration: underline;
 }
 
+/*
+=================
+ Section- Contact
+================= */
 
+.section-contact{
 
+    color: #1f2421;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 5.5em;
+    
+
+}
+
+.section-contact h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    
+    width: 20%;
+    margin: 0.5em auto;
+}
+
+.form-container{
+    /* border: 2px solid red; */
+    width: 50%;
+    margin:0 auto 1em;
+    background-color: #fffae5;
+    padding: 1.5em;
+   
+}
+
+.form-container label{
+    display: block;
+    letter-spacing: 2px;
+
+}
+
+.form-container textarea{
+    resize: none;
+}
+
+.form-container textarea,
+.form-container .input-field{
+    font-size: 1.1rem;
+}
+
+.form-container .input-field{
+    /* background-color: #e9f5db; */
+    width: 100%;
+    border:1px solid #dee2e6;
+    outline: none;
+    border-radius: 5px;
+    padding:0.8em 1em ;
+    margin:0.8em 0 ;
+
+}
+
+.form-btn{
+
+}
 /*
 ==============
  Footer
