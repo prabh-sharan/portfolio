@@ -2,13 +2,18 @@
 *{
     box-sizing: border-box;
 }
+
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0 ;
     font-size: 1rem;
     font-family: 'Heebo', sans-serif;
     letter-spacing: 2px;
-    /* background-color: #e9f5db; */
+    /* background-color: #1f2421; */
     color: #6c757d;
+    
 }
 
 .container{
@@ -40,7 +45,7 @@ main{
 
 .navbar{
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     /* border: 2px solid red; */
     /* background-color: #e9f5db; */
     padding: 1.15em;
@@ -53,14 +58,26 @@ main{
   
 }
 
-.navbar ul{
-    /* border: 2px solid green; */
-    width:45%;
-    padding: 0;
-    margin-right: 2em;
+.navbar ul,
+.navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.navbar-name{
+    font-size: 2rem;
+    font-weight: 800;
+    color: #55a630;
+    text-decoration: none;
+    margin-left: 0.5em;
+}
+
+.navbar ul{
+    /* border: 2px solid green; */
+    min-width:40%;
+    padding: 0;
+    margin-right: 2em;
     margin-left: auto;
     
 }
@@ -70,10 +87,11 @@ main{
     color: #1f2421;
     letter-spacing: 3px;
     animation: list-item 900ms 1000ms ease;
+    margin-left:2.5em;
     
 }
 
-@keyframes list-item{
+/* @keyframes list-item{
     0% {
         color:#55a630;
         margin-top: 2em;
@@ -81,7 +99,7 @@ main{
     }
    
   
-}
+} */
 
 .navbar-link{
     text-decoration: none;
@@ -105,15 +123,11 @@ main{
     color:#55a630;
     width: 100%;
 }
-.navbar-link:hover{
-    color:#55a630;
-   
-}
 
 
 
 /* main heading */
-.name {
+.main-heading {
     font-size:4.5rem;
     color: #1f2421;
     margin-bottom:0.625em;
@@ -137,18 +151,21 @@ main{
     max-width: 80%;
     display: flex;
     justify-content: space-between;
-    /* border: 2px solid red; */
     align-items: center;
     margin-top: 1.25em;
    
 }
 .social-icon{
     max-width:2.6em;
+    padding:0.25em;
+    margin:0 0.5em;
     transition:transform 120ms;
 }
 
 
 .social-icon:hover{
+    /* border:1.5px solid #55a630; */
+    /* border-radius: 18px; */
     transform: scale(1.1);
     
 }
@@ -203,7 +220,7 @@ main{
     font-size: 2.5rem;
     font-style:'Heebo', sans-serif ;
     font-weight: 600;
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
    
     
 }
@@ -254,6 +271,7 @@ main{
     display: flex;
     justify-content: space-around;
     margin-bottom:5em;
+    border: 2px solid red;
 }
 
 .project-card{
@@ -282,27 +300,41 @@ main{
 .project-code{
     display: flex;
     justify-content: space-between;
+    max-width: 100%;
     /* margin: 0 1em; */
-    font-size: 1rem;
+    border: 2px solid gray;
+    font-size: 1.1rem;
     font-weight: 500;
 }
 
-.project-code-live,
-.project-code-github{
-
+.project-code a{
+    color: #1f2421;
     text-decoration: none;
-    color:#1f2421;
-    
+    line-height: 1.5em;
+    border-bottom: 2px solid #fff;
 }
 
-.project-code-live:hover,
-.project-code-live:focus{
-    text-decoration: underline;
+.project-code a:hover{
+    border-bottom: 2px solid #1f2421;
+    transition: border-bottom 300ms ease 0ms;
 }
 
-.project-code-github:hover,
-.project-code-github:focus{
-    text-decoration: underline;
+
+
+.section-project-all{
+    color: #1f2421;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-decoration: none;
+    /* border: 2px solid red; */
+    border-bottom:2px solid #1f2421 ;
+    margin-left: 2em;
+    text-transform: uppercase;
+}
+
+
+.section-project-all:hover{
+    border: none;
 }
 
 /*
@@ -325,7 +357,7 @@ main{
     font-weight: 600;
     
     width: 20%;
-    margin: 0.5em auto;
+    margin: 0.5em auto 0.75em;
 }
 
 .form-container{
@@ -372,13 +404,16 @@ main{
     padding: 0.75em 0;
     font-size: 1.125rem;
     font-weight: 500;
+    border-radius: 5px;
     transition: all 0.2s ease 0s;
+    
     
 }
 
 .form-btn:hover{
-   
+    background-color: #343a40;
 }
+
 /*
 ==============
  Footer
@@ -389,8 +424,8 @@ footer{
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 0;
-    padding: 3em 0;
-    background-color: #e9f5db;
+    padding: 2em 0;
+    /* background-color: #e9f5db; */
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -462,15 +497,71 @@ footer ul li{
 ============== */
 
 /* for  width of 500 px or smaller */
-@media screen and (max-width:500px){
+
+@media screen and (max-width:440px) {
+    .section-about{
+        margin-top: 3em;
+    }
+  
+    
+}
+@media screen and (max-width:600px){
+    main{
+        height:800px;
+    }
+    .navbar-name{
+        display: none;
+    }
     .navbar ul {
-        /* display: flex; */
-        /* flex-direction: column; */
+     
+        margin: 2.25em auto;
+        font-size: 1.2rem;
+        width: 90%;
+    }
+    .navbar ul li{
+        margin-left: 0;
+    }
+    .main-heading{
+        font-size: 4rem;
+    }
+    .style-line{
+        display: none;
+        
+    }
+
+    
+    .section-about{
+        display: block;
+   
+    }
+    .section-about p{
+        margin-top: 4em;
+    }
+
+    
+
+    footer ul{
+        display: block;
     }
 }
 
 
 
+@media screen and (max-width:1000px) {
+    .social-icon{
+        margin: 0 1.8em;
+    }
+    .style-line{
+        width: 250px;
+    }
+   
+    .project-set{
+        display: block;
+    }
+    .project-card{
+        margin-bottom: 2em;
+    }
+}
 
 
 
